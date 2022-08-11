@@ -1,0 +1,264 @@
+:root {
+    --main-blue: #0f2849;
+    --main-white: #f0f0f0;
+    --main-red: #ac1f22;
+    --main-gray: #413a3a;
+    --main-black: #130010;
+    --headerBackground: linear-gradient(45deg, var(--main-red) 20%, var(--main-gray) 55%, var(--main-white) 100%);
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 60%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Monserrat", sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+    background-color: var(--main-blue);
+    color: var(--main-white);
+}
+
+a {
+    color: var(--main-white);
+    text-decoration: none;
+}
+
+h2 {
+    background: var(--headerBackground);
+    border-radius: 10px;
+}
+.sub-header {
+    width: 55%;
+    height: 30%;
+    font-family: "Calligraffitti", cursive;
+    padding: 30px;
+    margin: 0 auto;
+}
+.sub-header p {
+    padding: 10px;
+    text-decoration: underline;
+}
+
+/*---------Navigation Bar-------------*/
+#navbar {
+    background: linear-gradient(-45deg, var(--main-white) 10%, var(--main-gray) 65%, var(--main-white) 90%);
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    z-index: 10;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin-right: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-list a {
+    color: var(--main-black);
+    padding: 1rem;
+}
+
+.nav-list a:hover {
+    background-color: var(--main-red);
+    padding: 1rem;
+}
+
+/*---------Welcome Section-------------*/
+
+h1 {
+    font-size: 6rem;
+    padding: 3rem 0;
+    background: var(--headerBackground);
+    border-radius: 10px;
+    margin: auto;
+}
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    padding: auto;
+    background-color: var(--main-black);
+}
+
+.main-header {
+    padding-top: 25px;
+    font-family: "Calligraffitti", cursive;
+    text-align: center;
+}
+.main-header p {
+    padding-top: 10px;
+    text-decoration: underline;
+}
+
+.about-me {
+    text-align: center;
+    margin: -10px 50px;
+    padding: 10px;
+    font-size: 1.6rem;
+}
+
+/*---------Project Section-------------*/
+
+img {
+    width: 320px;
+    height: 180px;
+    border-radius: 4px;
+}
+.project-section {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 0 2rem 0;
+}
+
+.project {
+    grid-column: 1 / -1;
+}
+
+.project-grid {
+    background-color: var(--main-gray);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    width: 75%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    padding: 2%;
+}
+
+.git-profile {
+    background-color: var(--main-red);
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    text-decoration: underline;
+    margin: auto;
+    padding: 2px;
+}
+
+/*---------Contact Section-------------*/
+.contact-section {
+    background-color: var(--main-black);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0 2rem 0;
+}
+
+.contact {
+    grid-column: 1 / -1;
+}
+
+#contact-icon-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    width: 100%;
+    height: 50vh;
+   
+}
+a.profile-links {
+    margin: auto;
+    padding: 25px;
+    font-size: 5rem;
+}
+a.profile-links:hover {
+    font-size: 6rem;
+    padding: 15px;
+}
+.quote {
+    padding: 3rem;
+    font-family: "Calligraffitti", cursive;
+    color: goldenrod;
+    margin: 0 30%;
+}
+
+.quote p {
+    font-family: "Monserrat", sans-serif;
+    font-size: 1rem;
+}
+
+/*---------Media Queries-------------*/
+@media (max-width: 1200px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 58%;
+    }
+}
+
+@media (max-width: 680px) {
+    .project-section {
+        padding: 6rem 1rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        background-color: var(--main-blue);
+    }
+}
+
+@media (max-width: 320px) {
+    html {
+        font-size: 25%;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+        padding: auto;
+    }
+
+    .navbar {
+        justify-content: center;
+        align-items: center;
+        height: 2rem;
+    }
+
+    .nav-list {
+        margin: 0 1rem;
+    }
+
+    .project-grid {
+        overflow: hidden;
+        background-color: var(--main-blue);
+    }
+}
+
